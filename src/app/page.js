@@ -13,11 +13,11 @@ export default function Home() {
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative font-js">
       {/* Floating chat toggle */}
       <button
         onClick={() => setIsChatOpen(!isChatOpen)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 px-4 py-3 text-white shadow-lg transition-all hover:shadow-xl"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 px-4 py-3 text-white shadow-lg transition-all hover:shadow-xl hover:cursor-pointer"
       >
         <Sparkles size={20} />
         <span>AI Assistant</span>
@@ -53,7 +53,7 @@ export default function Home() {
               <Link href="/sell">
                 <Button
                   size="lg"
-                  className="group bg-gradient-to-r from-purple-600 to-blue-500 px-8 py-6 text-lg font-semibold hover:from-purple-700 hover:to-blue-600"
+                  className="group bg-gradient-to-r from-purple-600 to-blue-500 px-8 py-6 text-lg font-semibold hover:from-purple-700 hover:to-blue-600 hover:cursor-pointer"
                 >
                   Sell My Licenses
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -63,7 +63,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="px-8 py-6 text-lg font-semibold"
+                  className="px-8 py-6 text-lg font-semibold hover:cursor-pointer"
                 >
                   Learn More
                 </Button>
@@ -86,7 +86,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
               How It Works
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
               Selling your unused software licenses has never been easier
             </p>
           </motion.div>
@@ -99,13 +99,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group rounded-xl p-6 transition-all hover:bg-gray-50"
+                className="group rounded-xl p-6 transition-all hover:bg-purple-200 hover:text-black hover:cursor-pointer"
               >
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-600">
                   <step.icon className="h-8 w-8" />
                 </div>
                 <h3 className="mb-3 text-xl font-semibold">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-400">{step.description}</p>
                 <div className="mt-4 flex items-center text-purple-600 opacity-0 transition-all group-hover:opacity-100">
                   <span>Learn more</span>
                   <ChevronRight className="ml-1 h-4 w-4" />
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -126,7 +126,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="mb-16 text-center"
           >
-            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl text-black">
               Why Choose SoftSell
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
@@ -142,12 +142,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all hover:shadow-md"
+                className="overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all hover:shadow-md hover:cursor-pointer"
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-purple-100 to-blue-100 text-purple-600">
                   <reason.icon className="h-6 w-6" />
                 </div>
-                <h3 className="mb-3 text-lg font-semibold">{reason.title}</h3>
+                <h3 className="mb-3 text-lg font-semibold text-black">
+                  {reason.title}
+                </h3>
                 <p className="text-gray-600">{reason.description}</p>
               </motion.div>
             ))}

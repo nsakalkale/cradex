@@ -68,7 +68,7 @@ export default function Navbar() {
               className="block"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600">
+              <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 hover:cursor-pointer hover:-translate-y-2">
                 Sell My Licenses
               </Button>
             </Link>

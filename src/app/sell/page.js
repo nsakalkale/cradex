@@ -44,7 +44,7 @@ export default function SellPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mx-auto max-w-2xl text-lg text-gray-600 mb-8"
+            className="mx-auto max-w-2xl text-lg text-gray-400 mb-8"
           >
             Get cash for unused software licenses in just a few simple steps
           </motion.p>
@@ -54,7 +54,7 @@ export default function SellPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Link href="#start-selling">
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 px-8 py-6 text-lg font-semibold">
+              <Button className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 px-8 py-6 text-lg font-semibold hover:cursor-pointer hover:-translate-y-2">
                 Start Selling Now
               </Button>
             </Link>
@@ -72,7 +72,7 @@ export default function SellPage() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">How Selling Works</h2>
-              <p className="text-gray-600">
+              <p className="text-gray-400">
                 Our process is designed to be simple, secure, and fast
               </p>
             </motion.div>
@@ -99,7 +99,7 @@ export default function SellPage() {
                       <span className="text-purple-600 mr-2">{index + 1}.</span>
                       {step.title}
                     </h3>
-                    <p className="text-gray-600">{step.description}</p>
+                    <p className="text-gray-400">{step.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -127,7 +127,7 @@ export default function SellPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-xl mb-8 max-w-2xl mx-auto"
+              className="text-xl mb-8 max-w-2xl mx-auto text-gray-300"
             >
               Get started today and receive an offer within minutes
             </motion.p>
@@ -139,8 +139,8 @@ export default function SellPage() {
             >
               <Link href="/contact">
                 <Button
-                  variant="outline"
-                  className="text-purple-600 bg-white hover:bg-gray-100 px-8 py-6 text-lg font-semibold"
+                  variant="primary"
+                  className="text-purple-600 bg-white hover:bg-gray-100 px-8 py-6 text-lg font-semibold hover:cursor-pointer hover:-translate-y-2 "
                 >
                   Get a Free Valuation
                 </Button>
